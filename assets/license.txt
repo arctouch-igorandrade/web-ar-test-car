@@ -1,11 +1,11 @@
 Model Information:
-* title:	Mazda RX-7
-* source:	https://sketchfab.com/3d-models/mazda-rx-7-a9b8cbf303ef423b8eca36622ceb5334
-* author:	MEGA MODELS (https://sketchfab.com/rathnayakakalindu)
+* title:	Scifi Girl v.01
+* source:	https://sketchfab.com/3d-models/scifi-girl-v01-96340701c2ed4d37851c7d9109eee9c0
+* author:	patrix (https://sketchfab.com/patrix)
 
 Model License:
-* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
-* requirements:	Author must be credited. Commercial use is allowed.
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Mazda RX-7" (https://sketchfab.com/3d-models/mazda-rx-7-a9b8cbf303ef423b8eca36622ceb5334) by MEGA MODELS (https://sketchfab.com/rathnayakakalindu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Scifi Girl v.01" (https://sketchfab.com/3d-models/scifi-girl-v01-96340701c2ed4d37851c7d9109eee9c0) by patrix (https://sketchfab.com/patrix) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
