@@ -1,11 +1,11 @@
 Model Information:
-* title:	Scifi Girl v.01
-* source:	https://sketchfab.com/3d-models/scifi-girl-v01-96340701c2ed4d37851c7d9109eee9c0
-* author:	patrix (https://sketchfab.com/patrix)
+* title:	Building Classic - Historical Nordic
+* source:	https://sketchfab.com/3d-models/building-classic-historical-nordic-1326d95ffbb54facbec5f781925fdcd6
+* author:	Sunlanich (https://sketchfab.com/sunlanich)
 
 Model License:
-* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
-* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Scifi Girl v.01" (https://sketchfab.com/3d-models/scifi-girl-v01-96340701c2ed4d37851c7d9109eee9c0) by patrix (https://sketchfab.com/patrix) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+This work is based on "Building Classic - Historical Nordic" (https://sketchfab.com/3d-models/building-classic-historical-nordic-1326d95ffbb54facbec5f781925fdcd6) by Sunlanich (https://sketchfab.com/sunlanich) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
