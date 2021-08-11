@@ -12,6 +12,26 @@
     <script src = "https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script src = "https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> 
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        window.addEventListener('click', function () {
+          var video = document.querySelector('#btmi-vid');
+          if (video.paused == true) {
+            video.play();
+            } else {
+            video.pause();
+          }
+        }, false);
+
+        window.addEventListener('click', function () {
+          var vid2 = document.querySelector('#btmi-vid2');
+          if (vid2 == true) {
+            vid2.play();
+            } else {
+            vid2.pause();
+          }
+        }, false);
+       
+    </script>
     
     <body style="margin : 0px; overflow: hidden;">
         <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" inspector="" keyboard="" shortcuts="" screenshot="" device-orientation-permission-ui="">
@@ -25,7 +45,7 @@
                     scale="2">
                 </a-entity>
             </a-marker>
-            
+
             <a-entity camera></a-entity>
         </a-scene>
     </body>
