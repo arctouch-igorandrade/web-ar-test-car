@@ -11,56 +11,53 @@
 		<script src = "https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 		<script src = "https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> 
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
 		
 		
 		<body style='margin : 0px; overflow: hidden;'>
-			<a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" inspector="" keyboard="" shortcuts="" screenshot="" device-orientation-permission-ui="">
+			<a-scene 
+                gesture-detector 
+                vr-mode-ui="enabled: false;" 
+                renderer="logarithmicDepthBuffer: true;" 
+                embedded 
+                arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" 
+                inspector="" 
+                keyboard="" 
+                shortcuts="" 
+                screenshot="" 
+                device-orientation-permission-ui=""
+                id="scene"
+            >
 				<a-assets>
-                    <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"></a-asset-item>
+                    <a-asset-item 
+                        id="animated-asset" 
+                        src="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
+                    >
+                    </a-asset-item>
                 </a-assets>
-                <script>
-					let isMarkerVisible = false;
-                	window.addEventListener("onefingermove", handleRotation);
-					window.addEventListener("twofingermove", handleScale);
-					window.addEventListener("markerFound", (e) => {
-						isMarkerVisible = true;
-					});
-
-					window.addEventListener("markerLost", (e) => {
-						isMarkerVisible = false;
-					});
-
-					function handleRotation (event) {
-						if (isMarkerVisible) {
-                            el.object3D.rotation.y +=
-                                event.detail.positionChange.x * rotationFactor;
-
-                            el.object3D.rotation.x +=
-                                event.detail.positionChange.y * rotationFactor;
-						}
-					};
-					function handleScale (event) {
-						if (isMarkerVisible) {
-                            this.scaleFactor *= 1 + event.detail.spreadChange / event.detail.startSpread;
-
-                            this.scaleFactor = Math.min(
-                                Math.max(this.scaleFactor, this.data.minScale),
-                                this.data.maxScale
-                            );
-
-                            el.object3D.scale.x = scaleFactor * initialScale.x;
-                            el.object3D.scale.y = scaleFactor * initialScale.y;
-                            el.object3D.scale.z = scaleFactor * initialScale.z;
-						}
-					};
-                </script>
-				<a-marker id="animated-marker" type='barcode' value='6' smooth='true' smoothCount='5' smoothTolerance='0.02' smoothThreshold='2'>
+				<a-marker 
+                    id="animated-marker" 
+                    type='barcode' 
+                    value='6' 
+                    smooth='true' 
+                    smoothCount='5' 
+                    smoothTolerance='0.02' 
+                    smoothThreshold='2'
+                    raycaster="objects: .clickable"
+                    emitevents="true"
+                    cursor="fuse: false; rayOrigin: mouse;"
+                >
 					<a-entity
+                        gesture-handler="minScale: 0.25; maxScale: 10"
 						gltf-model="#animated-asset"
-						scale="0.1 0.1 0.1">
+						scale="0.1 0.1 0.1"
+                    >
 					</a-entity>
 				</a-marker>
 				<a-entity camera></a-entity>
+                <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
+                <!-- define a camera which will move according to the marker position -->
+                <!-- <a-marker-camera type='barcode' value='6' smooth='true' smoothCount='5' smoothTolerance='0.02' smoothThreshold='2'></a-marker-camera> -->
 			</a-scene>
 		</body>
 	</html>
