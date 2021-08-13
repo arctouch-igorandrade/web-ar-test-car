@@ -6,35 +6,19 @@
         </head>
 		
 		<script src = "https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-		<script src = "https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"> </script> 
 		<script src = "https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script> 
 		<script src = "https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-		<script src = "https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script> 
-        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
-		
 		
 		<body style='margin : 0px; overflow: hidden;'>
 			<a-scene 
-                gesture-detector 
+                gesture-detector
                 vr-mode-ui="enabled: false;" 
                 renderer="logarithmicDepthBuffer: true;" 
                 embedded 
-                arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" 
-                inspector="" 
-                keyboard="" 
-                shortcuts="" 
-                screenshot="" 
-                device-orientation-permission-ui=""
+                arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;"
                 id="scene"
             >
-				<a-assets>
-                    <a-asset-item 
-                        id="animated-asset" 
-                        src="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
-                    >
-                    </a-asset-item>
-                </a-assets>
 				<a-marker 
                     id="animated-marker" 
                     type='barcode' 
@@ -49,15 +33,14 @@
                 >
 					<a-entity
                         gesture-handler="minScale: 0.25; maxScale: 10"
-						gltf-model="#animated-asset"
+						gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
 						scale="0.1 0.1 0.1"
                     >
 					</a-entity>
 				</a-marker>
-				<a-entity camera></a-entity>
-                <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
-                <!-- define a camera which will move according to the marker position -->
-                <!-- <a-marker-camera type='barcode' value='6' smooth='true' smoothCount='5' smoothTolerance='0.02' smoothThreshold='2'></a-marker-camera> -->
+				<a-entity 
+                    camera
+                ></a-entity>
 			</a-scene>
 		</body>
 	</html>
