@@ -5,10 +5,10 @@
             <meta name="apple-mobile-web-app-capable" content="yes">
         </head>
 		
-		<script src = "https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-		<script src = "https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script> 
-		<script src = "https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-        <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+		<script src ="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+		<script src ="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script> 
+		<script src ="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+        <script src="gestures.js"></script>
 		
 		<body style='margin : 0px; overflow: hidden;'>
 			<a-scene 
@@ -31,12 +31,39 @@
                     emitevents="true"
                     cursor="fuse: false; rayOrigin: mouse;"
                 >
-					<a-entity
-                        gesture-handler="minScale: 0.25; maxScale: 10"
-						gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
-						scale="0.1 0.1 0.1"
+                    <a-plane
+                        position="0 0 0"
+                        rotation="0 0 0"
+                        width="4"
+                        height="4"
+                        material="opacity: 0.0; transparent: true"
+                        gesture-handler
                     >
-					</a-entity>
+                        <a-entity
+                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
+                            scale="0.1 0.1 0.1"
+                            position="3 0 3"
+                        >
+                        </a-entity>
+                        <a-entity
+                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
+                            scale="0.1 0.1 0.1"
+                            position="-3 0 3"
+                        >
+                        </a-entity>
+                        <a-entity
+                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
+                            scale="0.1 0.1 0.1"
+                            position="3 0 -3"
+                        >
+                        </a-entity>
+                        <a-entity
+                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
+                            scale="0.1 0.1 0.1"
+                            position="-3 0 -3"
+                        >
+                        </a-entity>
+                    </a-plane>
 				</a-marker>
 				<a-entity 
                     camera
