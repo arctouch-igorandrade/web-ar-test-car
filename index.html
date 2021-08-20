@@ -40,27 +40,34 @@
                         gesture-handler
                     >
                         <a-entity
+                            id="falatu"
                             gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
-                            scale="0.1 0.1 0.1"
+                            scale="0.05 0.05 0.05"
                             position="3 0 3"
+                            rotation="0 -160  0"
                         >
-                        </a-entity>
+                            <a-animation begin="click" easing="ease-in" attribute="scale"
+                                fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+                            </a-entity>
                         <a-entity
                             gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
-                            scale="0.1 0.1 0.1"
+                            scale="0.05 0.05 0.05"
                             position="-3 0 3"
+                            rotation="0 -10  0"
                         >
                         </a-entity>
                         <a-entity
                             gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
-                            scale="0.1 0.1 0.1"
-                            position="3 0 -3"
+                            scale="0.05 0.05 0.05"
+                            position="3 0 -3"  
+                            rotation="0 -100  0"
                         >
                         </a-entity>
                         <a-entity
                             gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
-                            scale="0.1 0.1 0.1"
+                            scale="0.05 0.05 0.05"
                             position="-3 0 -3"
+                            rotation="0 -50  0"
                         >
                         </a-entity>
                     </a-plane>
