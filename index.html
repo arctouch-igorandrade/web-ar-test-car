@@ -3,14 +3,21 @@
 		<head>
 			<meta name="viewport" content="width=device-width, initial-scale =1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, minimal-ui, viewport-fit ">
             <meta name="apple-mobile-web-app-capable" content="yes">
+            <link rel="stylesheet" href="assets/css/main.css">
+            <script src ="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+            <script src ="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script> 
+            <script src ="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+            <script src="assets/js/gestures.js"></script>
+            <script src="assets/js/main.js"></script>
         </head>
 		
-		<script src ="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-		<script src ="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar.js"></script> 
-		<script src ="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-        <script src="gestures.js"></script>
-		
 		<body style='margin : 0px; overflow: hidden;'>
+            <div id="firstModal" class="first-modal">
+                <div class="first-modal-content">
+                  <h1>WELCOME TO THE BENLYSTA AR EXPERIENCE</h1>
+                </div>
+                <button id="firstBtn">GET STARTED</button>
+            </div>
 			<a-scene 
                 gesture-detector
                 vr-mode-ui="enabled: false;" 
@@ -41,7 +48,7 @@
                     >
                         <a-entity
                             id="falatu"
-                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
+                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/objects/scene.gltf"
                             scale="0.05 0.05 0.05"
                             position="3 0 3"
                             rotation="0 -160  0"
@@ -50,21 +57,21 @@
                                 fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
                             </a-entity>
                         <a-entity
-                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
+                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/objects/scene.gltf"
                             scale="0.05 0.05 0.05"
                             position="-3 0 3"
                             rotation="0 -10  0"
                         >
                         </a-entity>
                         <a-entity
-                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
+                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/objects/scene.gltf"
                             scale="0.05 0.05 0.05"
                             position="3 0 -3"  
                             rotation="0 -100  0"
                         >
                         </a-entity>
                         <a-entity
-                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/assets/scene.gltf"
+                            gltf-model="https://raw.githubusercontent.com/arctouch-igorandrade/web-ar-test-car/main/objects/scene.gltf"
                             scale="0.05 0.05 0.05"
                             position="-3 0 -3"
                             rotation="0 -50  0"
